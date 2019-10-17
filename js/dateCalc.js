@@ -16,7 +16,16 @@ function calcDate(startdate, days) {
   return número de días naturales entre las dos fechas
 */
 function getDays(startdate, endDate) {
-   return 0;
+     
+    var a = startdate.getTime();
+    var b = endDate.getTime();
+    
+    var c = b - a;
+    
+    var d = parseInt((c/(1000*60*60*24)).toFixed(0));
+    
+    return d;
+    
 }
 
 /* Función que suma o resta un número de dias hábiles según el valor de operation 
@@ -34,6 +43,6 @@ function calcWorkingDate(startdate, days) {
   endDate: objeto Fecha inicio
   return número de días hábiles entre las dos fechas*/
 function getWorkingDays(startdate, endDate) {
-   return 0;
+   return getDays(startdate, endDate);
 }
 
