@@ -43,7 +43,7 @@ function calcWorkingDate(startdate, days) {
     
     startdate.setMonth(startdate.getMonth() - 1);
     
-    var festivos = [["1Ene", "6Ene"],[],[],[],["1May"],[],[],["15Ag"],[],["12Oct"],["1Nov"],["6Dic", "8Dic", "25Dic"]];
+    var festivos = [[1, 6],[],[],[],[1],[],[],[15],[],[12],[1],[6, 8, 25]];
     
     if(days > 0){
         
@@ -51,6 +51,16 @@ function calcWorkingDate(startdate, days) {
         
             startdate.setDate(startdate.getDate() + 1);
         
+            for(let i = 0 ; i < festivos.length ; i++){
+                
+                for(let j = 0 ; j < festivos[i].length; j++){
+                    
+                    if(startdate.getMonth() == i && startdate.getDate() == festivos[i][j]) c--;
+                    
+                }
+                
+            }
+            
             if(startdate.getDay() == 0 || startdate.getDay() == 6) c--;
           
         }
@@ -63,6 +73,16 @@ function calcWorkingDate(startdate, days) {
         
             startdate.setDate(startdate.getDate() - 1);
         
+            for(let i = 0 ; i < festivos.length ; i++){
+                
+                for(let j = 0 ; j < festivos[i].length; j++){
+                    
+                    if(startdate.getMonth() == i && startdate.getDate() == festivos[i][j]) c--;
+                    
+                }
+                
+            }
+            
             if(startdate.getDay() == 0 || startdate.getDay() == 6) c--;
           
         }

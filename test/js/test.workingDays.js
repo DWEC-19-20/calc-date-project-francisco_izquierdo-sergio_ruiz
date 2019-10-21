@@ -6,7 +6,7 @@ suite("Testing calcDate", function() {
         expect(calcWorkingDate(new Date(2019, 10, 13),14)).to.equal("31/10/2019");
     });
     test("Test pasado", function() {
-        expect(calcWorkingDate(new Date(2019, 10, 13),1000)).to.equal("11/8/2023");
+        expect(calcWorkingDate(new Date(2019, 10, 13),1000)).to.equal("26/9/2023");
     });
     test("Test pasado", function() {
         expect(calcWorkingDate(new Date(2019, 10, 13),0)).to.equal("13/10/2019");
