@@ -58,7 +58,7 @@ function calcWorkingDate(startdate, days) {
                     if(startdate.getMonth() == i && startdate.getDate() == festivos[i][j]) c--;
                     
                 }
-                
+                //Los test fallan porque los días festivos no los cuenta, cambiar eso.
             }
             
             if(startdate.getDay() == 0 || startdate.getDay() == 6) c--;
