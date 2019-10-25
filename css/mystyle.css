@@ -1,0 +1,58 @@
+
+
+.añadir_dias{
+
+    width: 60px;
+    height: 30px;
+}
+
+.div1{
+
+    width: 15%;
+}
+
+.div2{
+
+    width: 15%;
+}
+
+.div3{
+
+    width: 15%;
+}
+
+.tab {
+    
+    width: 50%;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #dedede;
+  }
+  
+  .tab button {
+    
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  .tab button.active {
+    background-color: #ccc;
+  }
+  
+  .tabcontent {
+    margin-top: 10px;
+    display: none;
+    padding: 6px 12px;
+    border: 0px solid #ccc;
+    border-top: none;
+  }

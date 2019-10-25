@@ -2,7 +2,76 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/mystyle.css">
 </head>
+<style>
+/*
+   * {
+
+        border:0.2px solid;
+    }
+*/
+    body,html{
+
+        border:0px;
+    }
+
+
+
+</style>
 <html>
     <body>
-    </body>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'AñadirDias')">Añadir Dias</button>
+            <button class="tablinks" onclick="openCity(event, 'ContarDias')">Contar Dias</button>
+            <button class="tablinks" onclick="openCity(event, 'ContarDiasLaborables')">Contar Dias Laborables</button>
+        </div>
+
+        <div id="AñadirDias" class="tabcontent">
+
+            <div class="div1">
+                <form>  
+                    <fieldset style="width: 95%">   
+                    <label>Fecha inicio </label><input type="date" name="fecha_inicio"><br><br>
+                    <label>Dias a añadir </label><input type="text" name="añadir_dias" class="añadir_dias"><br><br>
+                    <input type="submit" name="calcular" value="Calcular">
+                    </fieldset>
+                </form>
+            </div>
+
+        </div>
+
+
+        <div id="ContarDias" class="tabcontent">
+
+            <div class="div2">
+                <form>
+                    <fieldset style="width: 95%">
+                    <label>Fecha inicio </label><input type="date" name="fecha_inicio"><br><br>
+                    <label>Fecha final </label><input type="date" name="fecha_final"><br><br>
+                    <input type="submit" name="calcular" value="Calcular">
+                    </fieldset>
+                </form>
+            </div>
+
+        </div>
+
+
+        <div id="ContarDiasLaborables" class="tabcontent">
+
+            <div class="div3">
+                <form>
+                    <fieldset style="width: 95%">         
+                    <label>Fecha inicio </label><input type="date" name="fecha_inicio"><br><br>
+                    <label>Fecha final </label><input type="date" name="fecha_final"><br><br>
+                    <input type="submit" name="calcular" value="Calcular">
+                    </fieldset>
+                </form>
+            </div>   
+
+        </div>
+
+
+        
+    <script src="js/tabs.js"></script>
+</body>
 </html>
