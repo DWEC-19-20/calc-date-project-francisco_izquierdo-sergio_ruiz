@@ -21,19 +21,25 @@
     <body>
 
         <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'AñadirDias')">Añadir Dias</button>
+            <button class="tablinks" onclick="openCity(event, 'AñadirDias')">A&ntilde;adir Dias</button>
             <button class="tablinks" onclick="openCity(event, 'ContarDias')">Contar Dias</button>
             <button class="tablinks" onclick="openCity(event, 'ContarDiasLaborables')">Contar Dias Laborables</button>
+            <button class="tablinks" onclick="openCity(event, 'AñadirDiasLaborables')">A&ntilde;adir Dias Laborables</button>
         </div>
 
         <div id="AñadirDias" class="tabcontent">
 
-            <div class="div1">
+            <div class="div">
                 <form>  
                     <fieldset style="width: 95%">   
-                    <label>Fecha inicio </label><input type="date" name="fecha_inicio"><br><br>
-                    <label>Dias a añadir </label><input type="text" name="añadir_dias" class="añadir_dias"><br><br>
-                    <input type="submit" name="calcular" value="Calcular">
+                    <h2>Fecha inicio </h2><input type="date" name="fecha_inicio"><br><br>
+                    <h2>Numero de Dias </h2><input type="text" name="añadir_dias" class="añadir_dias">
+                    <select name="operacion">
+                        <option>Sumar</option>
+                        <option>Restar</option>
+                    </select>
+                    <br><br>
+                    <input type="submit" name="calcular" value="Calcular" class="boton-margen">
                     </fieldset>
                 </form>
             </div>
@@ -43,12 +49,12 @@
 
         <div id="ContarDias" class="tabcontent">
 
-            <div class="div2">
+            <div class="div">
                 <form>
                     <fieldset style="width: 95%">
-                    <label>Fecha inicio </label><input type="date" name="fecha_inicio"><br><br>
-                    <label>Fecha final </label><input type="date" name="fecha_final"><br><br>
-                    <input type="submit" name="calcular" value="Calcular">
+                    <h2>Fecha inicio </h2><input type="date" name="fecha_inicio"><br><br>
+                    <h2>Fecha final </h2><input type="date" name="fecha_final"><br><br>
+                    <input type="submit" name="calcular" value="Calcular" class="boton-margen">
                     </fieldset>
                 </form>
             </div>
@@ -58,17 +64,37 @@
 
         <div id="ContarDiasLaborables" class="tabcontent">
 
-            <div class="div3">
+            <div class="div">
                 <form>
                     <fieldset style="width: 95%">         
-                    <label>Fecha inicio </label><input type="date" name="fecha_inicio"><br><br>
-                    <label>Fecha final </label><input type="date" name="fecha_final"><br><br>
-                    <input type="submit" name="calcular" value="Calcular">
+                    <h2>Fecha inicio </h2><input type="date" name="fecha_inicio"><br><br>
+                    <h2>Fecha final </h2><input type="date" name="fecha_final"><br><br>
+                    <input type="submit" name="calcular" value="Calcular" class="boton-margen">
                     </fieldset>
                 </form>
             </div>   
 
         </div>
+
+
+        <div id="AñadirDiasLaborables" class="tabcontent">
+
+                <div class="div">
+                    <form>
+                        <fieldset style="width: 95%">         
+                        <h2>Fecha inicio </h2><input type="date" name="fecha_inicio"><br><br>
+                        <h2>Numero de Dias </h2><input type="text" name="añadir_dias" class="añadir_dias">
+                        <select name="operacion">
+                            <option>Sumar</option>
+                            <option>Restar</option>
+                        </select>
+                        <br><br>
+                        <input type="submit" name="calcular" value="Calcular" class="boton-margen">
+                        </fieldset>
+                    </form>
+                </div>   
+    
+            </div>
 
 
         
