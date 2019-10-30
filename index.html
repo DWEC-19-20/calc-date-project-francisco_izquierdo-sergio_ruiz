@@ -2,7 +2,97 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/mystyle.css">
 </head>
+<style>
+/*
+   * {
+        border:0.2px solid;
+    }
+*/
+    body,html{
+        border:0px;
+    }
+</style>
 <html>
     <body>
+<center>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'AñadirDias')">A&ntilde;adir Dias</button>
+            <button class="tablinks" onclick="openCity(event, 'ContarDias')">Contar Dias</button>
+            <button class="tablinks" onclick="openCity(event, 'ContarDiasLaborables')">Contar Dias Laborables</button>
+            <button class="tablinks" onclick="openCity(event, 'AñadirDiasLaborables')">A&ntilde;adir Dias Laborables</button>
+        </div>
+
+        <div id="AñadirDias" class="tabcontent">
+
+            <div class="div">
+                 
+                    <fieldset style="width: 95%;height: 300px">   
+                    <h2>Fecha inicio</h2><input type="date" id="añadirDfecha">
+                    <button id="añadirHoy">Hoy</button><br><br>
+                    <h2>Numero de Dias </h2><input type="text" id="añadirDdias" class="añadir_dias">
+                    <select id="añadirDoperacion">
+                        <option>Sumar</option>
+                        <option>Restar</option>
+                    </select>
+                    <br><br>
+                    <input type="submit" id="calcAñadirDias" value="Calcular" class="boton-margen">
+                    </fieldset>
+                
+            </div>
+
+        </div>
+
+
+        <div id="ContarDias" class="tabcontent">
+
+            <div class="div">
+                    <fieldset style="width: 95%;height: 300px">
+                    <h2>Fecha inicio </h2><input type="date" id="añadirDfecha1">
+                    <button id="añadirHoy1">Hoy</button><br><br>
+                    <h2>Fecha final </h2><input type="date" id="fechaF"><br><br>
+                    <input type="submit" value="Calcular" class="boton-margen" id="getDias">
+                    </fieldset>
+            </div>
+
+        </div>
+
+
+        <div id="ContarDiasLaborables" class="tabcontent">
+
+            <div class="div">
+                    <fieldset style="width: 95%;height: 300px">         
+                    <h2>Fecha inicio </h2><input type="date" id="añadirDfecha2">
+                    <button id="añadirHoy2">Hoy</button><br><br>
+                    <h2>Fecha final </h2><input type="date" id="fechaFL"><br><br>
+                    <input type="submit" value="Calcular" id="getDiasL" class="boton-margen" id="getDiasL">
+                    </fieldset>
+            </div>   
+
+        </div>
+
+
+        <div id="AñadirDiasLaborables" class="tabcontent">
+
+                <div class="div">
+                        <fieldset style="width: 95%;height: 300px">         
+                        <h2>Fecha inicio </h2><input type="date" id="añadirDfecha3">
+                    <button id="añadirHoy3">Hoy</button><br><br>
+                        <h2>Numero de Dias </h2><input type="text" class="añadir_dias" id="añadirDdiasL">
+                        <select id="añadirDoperacionL">
+                            <option>Sumar</option>
+                            <option>Restar</option>
+                        </select>
+                        <br><br>
+                        <input type="submit" value="Calcular" id="calcAñadirDiasL" class="boton-margen">
+                        </fieldset>
+                </div>   
+    
+            </div>
+
+
+        </center>
+    <script src="js/tabs.js"></script>
+    <script src="js/dateCalc.js"></script>
+    <script src="js/interface.js"></script>
     </body>
 </html>
