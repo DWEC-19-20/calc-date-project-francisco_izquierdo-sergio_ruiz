@@ -1,3 +1,5 @@
+const resultado =  document.getElementById("resultado");
+
 document.getElementById("añadirHoy").addEventListener("click", function(){
     
     var hoy = new Date();
@@ -56,6 +58,10 @@ document.getElementById("calcAñadirDias").addEventListener("click", function(){
     
     alert(fechaFinal);
     
+    resultado.style.visibility = "visible";
+    
+    resultado.innerHTML = "El resultado es: "+fechaFinal;
+    
 })
 
 document.getElementById("getDias").addEventListener("click", function(){
@@ -78,6 +84,10 @@ document.getElementById("getDias").addEventListener("click", function(){
     
     alert("Hay "+dias+" de diferencia");
     
+    resultado.style.visibility = "visible";
+    
+    resultado.innerHTML = "El resultado es: "+dias;
+    
 })
 
 document.getElementById("calcAñadirDiasL").addEventListener("click", function(){
@@ -97,6 +107,10 @@ document.getElementById("calcAñadirDiasL").addEventListener("click", function()
     var fechaFinal = calcWorkingDate(fecha, dias);
     
     alert(fechaFinal);
+    
+    resultado.style.visibility = "visible";
+    
+    resultado.innerHTML = "El resultado es: "+fechaFinal;
     
 })
 
@@ -119,5 +133,9 @@ document.getElementById("getDiasL").addEventListener("click", function(){
     var dias = getWorkingDays(fechaI, fechaF);
     
     alert("Hay "+dias+" de diferencia");
+    
+    resultado.style.visibility = "visible";
+    
+    resultado.innerHTML = "El resultado es: "+dias;
     
 })
